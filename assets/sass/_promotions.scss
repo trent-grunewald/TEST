@@ -1,0 +1,72 @@
+@import 'variables';
+
+.promotions{
+  background: url(/img/background.png);
+}
+
+.promotion-container{
+  text-align: center;
+  padding-top: 10%;
+}
+
+.promotions-head{
+  color: #b5b3b4;
+  font-weight: 700;
+  letter-spacing: 15px;
+}
+
+.promotions-title{
+  font-family: $ff-title;
+  padding-top: 3%;
+  margin-bottom: 2em;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin-bottom: 13em;
+  background: white;
+  border: 2px solid black;
+}
+
+#grid-item1, #grid-item3, #grid-item5{
+  height: 400px;
+  width: auto;
+  margin: 15px;
+}
+
+#grid-item1{
+  background: url(/img/promotions1.jpg)center center no-repeat;
+  background-size: cover;
+}
+
+#grid-item2, #grid-item4, #grid-item6{
+  padding-top: 25%;
+  background: white;
+}
+
+.grid-item-title{
+  font-family: $ff-title;
+  font-size: 1.5em;
+}
+
+.grid-item-seperator{
+  margin: 4em;
+  color: #b5b3b4;
+  letter-spacing: .5em;
+}
+
+.grid-item-desc{
+  line-height: 2;
+  color: #b5b3b4;
+}
+
+#grid-item3{
+  background: url(/img/promotions3.jpg)center center no-repeat;
+  background-size: cover;
+}
+
+#grid-item5{
+  background: url(/img/promotions5.jpg) center center no-repeat;
+  background-size: cover;
+}

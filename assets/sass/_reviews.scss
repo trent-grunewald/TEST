@@ -1,0 +1,97 @@
+@import 'variables';
+
+.review{
+  min-height: 700px;
+  text-align: right;
+}
+
+.chef{
+  background: url(/img/chef.png) no-repeat;
+  height: 800px;
+  width: 500px;
+  background-size: contain;
+}
+
+.review-head{
+  color: #b5b3b4;
+  font-weight: 700;
+  letter-spacing: 15px;
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+.review-title{
+  font-family: $ff-title;
+}
+
+.review-quote{
+  margin: 4em 0;
+  font-weight: 700;
+  font-size: 1.25em;
+}
+
+.review-quote-body{
+  line-height: 2;
+    color: #b5b3b4;
+}
+
+.reviewer{
+  font-weight: 600;
+  margin-top: 3em;
+
+  .quote2{
+    color: #b5b3b4;
+    font-style: italic;
+  }
+}
+
+.review-body{
+  min-height: 300px;
+}
+
+  .arrows{
+    margin-top: 5em;
+    font-size: 2em;
+    color: #b5b3b4;
+  }
+
+  .fa-arrow-left{
+    margin-right: 2em;
+  }
+
+  .fa-arrow-left.ready,
+  .fa-arrow-right.ready{
+    color: black;
+  }
+
+  @media only screen and (max-width: 1075px) {
+    .chef{
+      width: 300px;
+      height: 750px;
+      margin-top: 5.25em;
+      }
+
+      .arrows{
+        margin-top: 2em;
+      }
+    }
+    @media only screen and (max-width: 768px) {
+      .chef{
+        display: none;
+      }
+
+      .arrows{
+        margin-top: 2em;
+        margin-bottom: 3em;
+      }
+
+      .review-body{
+        min-height:300px
+      }
+    }
+
+    @media only screen and (max-width: 400px) {
+      .review-body{
+        min-height:400px
+      }
+    }

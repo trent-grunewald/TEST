@@ -1,0 +1,146 @@
+@import 'variables';
+
+.contact{
+  background: url(/img/background.png);
+  min-height: 1200px;
+  
+  &-container{
+    position: relative;
+  }
+}
+
+.contact-head{
+  color: #b5b3b4;
+    font-weight: 700;
+    letter-spacing: 15px;
+    text-align: center;
+    
+}
+
+.contact-title{
+  font-family: $ff-title;
+  text-align: center;
+  margin: 1.5em 0;
+}
+
+.contact-box{
+  letter-spacing: 1px;
+  margin-bottom: 2em;
+  background: white;
+  box-shadow: 5px 5px 25px black;
+  z-index: 5;
+  position: relative;
+  
+  .col-md-6{
+    padding: 5em;
+  }
+}
+
+.contact-location{
+  font-family: $ff-title;
+  font-size: 2em;
+  margin-bottom: 1em;
+  
+
+  span{
+    color: #b5b3b4;
+  }
+}
+
+.contact-address{
+  font-weight: 500;
+    line-height: 2;
+    color: #b5b3b4;
+    letter-spacing: 1px;
+    margin-bottom: 2em;
+}
+
+.contact-email{
+  font-family: $ff-title;
+  font-weight: 500;
+
+  span{
+    font-weight: 500;
+    color: #b5b3b4;
+  }
+}
+
+.contact-underline{
+  width: 100px;
+  display: table-cell;
+  border-bottom: 3px solid black;
+  padding-top: 3em;
+}
+
+.call{
+  padding-left: 5em;
+}
+
+.contact-call{
+  font-weight: 500;
+  line-height: 2;
+  color: #b5b3b4;
+  letter-spacing: 1px;
+  margin-bottom: 1em;
+}
+
+.contact-number{
+  font-family: $ff-number;
+  font-size: 2em;
+  margin-bottom: 1.5em;
+}
+
+.contact-hours-title{
+  font-weight: bold;
+  margin-top: 2em;
+  margin-bottom: .5em;
+}
+
+.contact-street{
+font-weight: 500;
+line-height: 2;
+color: #b5b3b4;
+letter-spacing: 1px;
+}
+
+#map{
+  height: 600px;
+  width: 108%;
+  position: absolute;
+  top: 45em;
+  left: -4em;
+  z-index: 1;
+  border: 2px solid black;
+}
+
+@media only screen and (max-width: 1100px) {
+
+  #map{
+    top:unset;
+    left: 0;
+    height: 400px;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+  }
+}
+@media only screen and (max-width: 915px) {
+  #map{
+    height: 350px;
+  }
+}
+@media only screen and (max-width: 770px) {
+  .contact-box{
+    .col-md-6{
+      padding: 3em;
+    }
+  }
+
+  .contact-number{
+    font-size: 1.75em;
+  }
+
+  #map{
+    display: none;
+  }
+}

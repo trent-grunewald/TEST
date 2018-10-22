@@ -1,0 +1,155 @@
+@import 'variables';
+
+.menu{
+  margin-bottom: 15px;
+  margin: 0 auto;
+
+  &_logo {
+    height: 70px;
+    width: 100px;
+    background: url(/img/logodark.png) no-repeat;
+    background-size: contain;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px;
+  }
+
+  &_section{
+    margin-bottom: 30px;
+
+    h3{
+      font-style: italic;
+      font-weight: 600;
+      text-decoration: underline 2px solid black;
+      border: 2px solid black;
+      text-align: center;
+      padding: 3px;
+      font-family: initial;
+      margin-bottom: 1em;
+      font-size: 1.15em;
+  }
+
+    h4{
+      margin-bottom: 0px;
+      font-weight: 700;
+      font-family: initial;
+      margin-bottom: 0px;
+      letter-spacing: 1px;
+    }
+  }
+
+  &_item{
+      margin: 0 15px;
+      position: relative;
+  }
+}
+
+.restName{
+  text-align: center;
+  font-size: 70px;
+  margin-top: 0;
+  font-family: $ff-title;
+  padding-bottom: 30px;
+}
+
+.price {
+  display: block;
+  float: right;
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  background-color: white;
+  font-weight: bold;
+  font-family: initial;
+}
+
+.description {
+  margin-top: 10px;
+  font-style: italic;
+  background-color: white;
+  display: inline-block;
+  max-width: 50%;
+  font-family: initial;
+}
+
+hr {
+  border: none;
+  border-top: 1px dotted black;
+  margin-top: -4px;
+  margin-bottom: 20px;
+}
+
+.warning{
+  text-align: center;
+}
+
+.menu-body{
+  background: white;
+  outline: 2px solid black;
+  padding: 20px;
+  position: relative;
+  max-height: 770px;
+  margin-top: 5em;
+  overflow-y: auto;
+}
+
+#close-menu{
+  cursor: pointer;
+  float: right;
+  position: absolute;
+  right: 50px;
+  top: 40px;
+  font-size: 40px;
+}
+
+@media only screen and (max-width: 790px) {
+  .menu-body{
+  background: white;
+  outline: 2px solid black;
+  padding: 20px;
+  position: relative;
+  max-height: 850px;
+  overflow-y: auto;
+  margin-top: 1.25em;
+  }
+
+  #close-menu{
+    top: 30px;
+  }
+
+  .restName{
+    font-size: 50px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .menu-body{
+  background: white;
+  outline: 2px solid black;
+  padding: 20px;
+  position: relative;
+  max-height: 900px;
+  overflow-y: auto;
+  margin-top: 0;
+  }
+
+  #close-menu{
+    font-size: 30px;
+  }
+
+  .restName{
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  #close-menu{
+    left: 48%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .restName{
+    margin-top: 2em;
+  }
+}

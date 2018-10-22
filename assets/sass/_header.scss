@@ -1,0 +1,106 @@
+header{
+  width: 100%;
+}
+
+.logo{
+  background: url(/img/logodark.png) no-repeat;
+  background-size: contain;
+  height: 32px;
+  width: 51px;
+  position: absolute;
+  top: 14px;
+}
+
+nav{
+  padding: 20px;
+  letter-spacing: 2px;
+  display: flex;
+  font-family: $ff-title;
+  
+  .nav-item{
+    margin-left: auto;
+    color: black;
+    text-decoration: none;
+    transition: .5s ease-in-out;
+
+    &:hover{
+    box-shadow: 1px 1px 6px 5px black;
+    }
+  }
+}
+
+.reservations{
+  .fa{
+    position: relative;
+    font-size: 1em;
+    right: 0;
+    top: 0;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .logo{
+    position: unset;
+  }
+
+  .nav {
+    flex-direction: column;
+    flex-flow: column wrap;
+    color: black;
+    text-shadow: none;
+
+    a {
+      color: black;
+    }
+    .nav-item {
+      margin:0 1em;
+     justify-content: left;
+     display: none;
+     color: black;
+    }
+  }
+   .reservations {
+    text-shadow: 3px 3px 3px black;
+    margin: 0em;
+    justify-content: left;
+    flex-direction: column;
+    flex-flow: column wrap;
+    text-shadow: none;
+      .fa{
+        display: none;
+      }
+     }
+
+     .nav-collapse {
+      display: flex;
+      line-height: 4;
+      background: white;
+      color: black;
+      text-decoration: none;
+      width: 50%;
+      font-family: $ff-title;
+      padding-left: 24px;
+      transition: .5s all;
+      flex: 1 1 auto;
+      position: relative;
+      
+      &.nav-collapse:before{
+        content: "";
+        position: absolute;
+        width: 8rem;
+        height: 2px;
+        top: 2.5em;
+        background-color: #040404;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.3s ease-in-out 0s;
+      }
+      
+      &.nav-collapse:hover:before {
+        visibility: visible;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+      }
+      }
+      }
+    

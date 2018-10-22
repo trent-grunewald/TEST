@@ -1,0 +1,277 @@
+@import url( 'https://fonts.googleapis.com/css?family=Playfair+Display:700');
+@import 'variables';
+
+
+.specialMenu{
+  min-height: 1100px;
+  position: relative;
+  background: url(/img/background.png);
+}
+
+.special-top{
+  text-align: center;
+  padding-top: 10em;
+  margin-bottom: 5em;
+}
+
+.special-head{
+  color: #b5b3b4;
+  font-weight: 700;
+  letter-spacing: 15px;
+}
+
+.special-title{
+  font-family: $ff-title;
+  margin-top: .5em;
+}
+
+.card-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-gap: 10px;
+}
+
+.top-card{
+  position: relative;
+  text-align: center;
+}
+
+#card1{
+  background: url(/img/nystrip.jpg);
+  width: 100%;
+  height: 250px;
+  background-size: cover;
+}
+
+#card2{
+  background: url(/img/tbone.jpg);
+  width: 100%;
+  height: 250px;
+  background-size: cover;
+}
+
+#card3{
+  background: url(/img/ribeye.jpg);
+  width: 100%;
+  height: 250px;
+  background-size: cover;
+}
+
+#card4{
+  background: url(/img/porterhouse.jpg);
+  width: 100%;
+  height: 250px;
+  background-size: cover;
+}
+
+#card5{
+  background: url(/img/sirloin.jpg);
+  width: 100%;
+  height: 250px;
+  background-size: cover;
+}
+
+#card6{
+  background: url(/img/filetmignon.jpg);
+  width: 100%;
+  height: 250px;
+  background-size: cover;
+}
+
+.light-circle{
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    background: #ffffff6e;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.light-circle-back{
+  position: absolute;
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  background: #ffffff6e;
+  margin-left: auto;
+  margin-right: auto;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+.special-price{
+  font-family: "Prata",serif;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  font-size: 2.75em;
+  color: black;
+  text-align: center;
+  background: #fff;
+  line-height: 2.35;
+  position: absolute;
+  left: 0;
+  right: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.special-price-back{
+  font-family: "Prata",serif;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  font-size: 2.75em;
+  color: black;
+  text-align: center;
+  background: #fff;
+  line-height: 2.35;
+  position: absolute;
+  left: 0;
+  right: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card-container{
+  text-align: center;
+    position: absolute;
+    bottom: 3em;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.special-menu-title{
+  font-family: $ff-title;
+  margin-bottom: 1em;
+  font-size: 1.25em;
+}
+
+.special-menu-title-back{
+  font-family: $ff-title;
+  margin-bottom: 1em;
+  font-size: 1.25em;
+}
+
+.special-menu-description{
+  color: #b5b3b4;
+  line-height: 1.5em;
+}
+
+.special-menu-description-back{
+  color: #b5b3b4;
+  line-height: 1.5em;
+}
+
+.view-menu{
+  font-family: "Playfair Display",serif;
+  color: black;
+  letter-spacing: 2px;
+  text-shadow: 0px 0px;
+  text-decoration: underline #b5b3b4;
+  position: absolute;
+  left: 46%;
+  bottom: 11em;
+}
+
+.col-md-4 {
+  cursor: pointer;
+  perspective: 600;
+  position: relative;
+  width: 150px;
+  height: 450px;
+}
+.card {
+  cursor: pointer;
+  background: white;
+  padding: 20px;
+  outline: 2px solid black;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all 1.25s ease-in-out;
+  height: 450px;
+  perspective: 600;
+  position: relative;
+}
+.flipped {
+  transform: rotateY(180deg);
+}
+.card .side {
+  backface-visibility: hidden;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+.card .back {
+  padding: 20px;
+  background: #ffffff;
+  position: absolute;
+  transform: rotateY(180deg);
+  top: 0;
+  right: .5px;
+  height: 450px;
+}
+
+.menuCard{
+  display: none;
+}
+
+@media only screen and (max-width: 1250px) {
+  .card{
+    width: 95%;
+  }
+}
+
+@media only screen and (max-width: 1188px) {
+  .menuCard{
+    display: unset;
+    padding: 100px;
+    text-align: center;
+    
+    &-text{
+      text-decoration: none;
+      color: black;
+      font-family: "Playfair Display",serif;
+      font-size: 50px;
+      text-transform: capitalize;
+      position: static;
+    }
+
+    &-small{
+      display: none;
+    }
+  }
+  
+  .card-grid{
+    padding-bottom: 50px;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .card{
+    width:90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .special-title{
+    font-size: 1.75em;
+  }
+
+  .special-menu{
+    padding-bottom: 15em;
+  }
+
+  .view-menu{
+    left: 30%;
+    bottom: 7em; 
+  }
+}
