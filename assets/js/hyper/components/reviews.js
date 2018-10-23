@@ -19,8 +19,6 @@ export default function Reviews({state, actions}) {
     }
   }
 
-  // setInterval(leftArrow,2000);
-
   const rightArrow = function(){
     if(state.globalState.setReview.currentReview !== (state.globalState.reviews.length - 1)) {
       actions.nextReview()

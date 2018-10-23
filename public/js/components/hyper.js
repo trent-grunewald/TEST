@@ -141,13 +141,109 @@ function Contact(_ref) {
       actions = _ref.actions;
 
 
+  return (0, _hyperapp.h)(
+    "section",
+    { "class": "contact", id: "contact" },
+    (0, _hyperapp.h)(
+      "div",
+      { "class": "container contact-container" },
+      (0, _hyperapp.h)(
+        "h5",
+        { "class": "contact-head" },
+        "CONTACT US"
+      ),
+      (0, _hyperapp.h)(
+        "h1",
+        { "class": "contact-title" },
+        "COME ENJOY OUR MEAT!"
+      ),
+      (0, _hyperapp.h)(
+        "div",
+        { "class": "container contact-box" },
+        (0, _hyperapp.h)(
+          "div",
+          { "class": "col-md-6" },
+          (0, _hyperapp.h)(
+            "h5",
+            { "class": "contact-location" },
+            "Granger, ",
+            (0, _hyperapp.h)(
+              "span",
+              null,
+              "Texas"
+            )
+          ),
+          (0, _hyperapp.h)(
+            "h5",
+            { "class": "contact-address" },
+            "901 Co Rd 336, In the basement,",
+            (0, _hyperapp.h)("br", null),
+            " Granger, TX 76530"
+          ),
+          (0, _hyperapp.h)(
+            "h5",
+            { "class": "contact-email" },
+            "Email: ",
+            (0, _hyperapp.h)(
+              "span",
+              null,
+              "seasoned@overseasoned.com"
+            )
+          ),
+          (0, _hyperapp.h)(
+            "h1",
+            { "class": "contact-underline" },
+            "       "
+          )
+        ),
+        (0, _hyperapp.h)(
+          "div",
+          { "class": "col-md-6" },
+          (0, _hyperapp.h)(
+            "h5",
+            { "class": "contact-call" },
+            "Call for reservations:"
+          ),
+          (0, _hyperapp.h)(
+            "h1",
+            { "class": "contact-number" },
+            "(206)-643-0185"
+          ),
+          (0, _hyperapp.h)(
+            "h5",
+            { "class": "contact-hours-title" },
+            "Weekday Hours:"
+          ),
+          (0, _hyperapp.h)(
+            "h5",
+            { "class": "contact-street" },
+            "from 4pm-9pm",
+            (0, _hyperapp.h)("br", null),
+            "Call for reservations"
+          ),
+          (0, _hyperapp.h)(
+            "h5",
+            { "class": "contact-hours-title" },
+            "Weekend Hours:"
+          ),
+          (0, _hyperapp.h)(
+            "h5",
+            { "class": "contact-street" },
+            "from 3pm-10pm",
+            (0, _hyperapp.h)("br", null),
+            "Call for reservations"
+          )
+        )
+      ),
+      (0, _hyperapp.h)(
+        "div",
+        { id: "map" },
+        setTimeout(mapBox, 1)
+      )
+    )
+  );
   function mapBox() {
-    // DO NOT REMOVE, Prevents leaflet initialization bug
-    var container = L.DomUtil.get('map');
-    if (container != null) {
-      container._leaflet_id = null;
-    }
-
+    if (document.querySelector('#map').children.length > 0) return;
     // LEAFLET MAP
     var mymap = L.map('map').setView([30.6928582, -97.4577975], 7);
     var marker = L.marker([30.6928582, -97.4577975]).addTo(mymap);
@@ -158,6 +254,7 @@ function Contact(_ref) {
     marker2.bindPopup("<b>Come enjoy family dinner,</b><br>with us!").openPopup();
     marker3.bindPopup("<b>Come on in,</b><br>meet our family.").openPopup();
     marker4.bindPopup("<b>Try our Award winning,</b><br>chili, family recipe.").openPopup();
+
     var circle = L.circle([30.6928582, -97.4577975], {
       color: 'red',
       fillColor: '#f03',
@@ -192,108 +289,6 @@ function Contact(_ref) {
       accessToken: 'pk.eyJ1IjoidHJlbnRnIiwiYSI6ImNqbWZlZ291OTA4MWgzdXFwMWZhcjRxcjYifQ.JX8sZBfAm_hx2lkliZ1F5g'
     }).addTo(mymap);
   }
-
-  return (0, _hyperapp.h)(
-    'section',
-    { 'class': 'contact', id: 'contact' },
-    (0, _hyperapp.h)(
-      'div',
-      { 'class': 'container contact-container' },
-      (0, _hyperapp.h)(
-        'h5',
-        { 'class': 'contact-head' },
-        'CONTACT US'
-      ),
-      (0, _hyperapp.h)(
-        'h1',
-        { 'class': 'contact-title' },
-        'COME ENJOY OUR MEAT!'
-      ),
-      (0, _hyperapp.h)(
-        'div',
-        { 'class': 'container contact-box' },
-        (0, _hyperapp.h)(
-          'div',
-          { 'class': 'col-md-6' },
-          (0, _hyperapp.h)(
-            'h5',
-            { 'class': 'contact-location' },
-            'Granger, ',
-            (0, _hyperapp.h)(
-              'span',
-              null,
-              'Texas'
-            )
-          ),
-          (0, _hyperapp.h)(
-            'h5',
-            { 'class': 'contact-address' },
-            '901 Co Rd 336, In the basement,',
-            (0, _hyperapp.h)('br', null),
-            ' Granger, TX 76530'
-          ),
-          (0, _hyperapp.h)(
-            'h5',
-            { 'class': 'contact-email' },
-            'Email: ',
-            (0, _hyperapp.h)(
-              'span',
-              null,
-              'seasoned@overseasoned.com'
-            )
-          ),
-          (0, _hyperapp.h)(
-            'h1',
-            { 'class': 'contact-underline' },
-            '       '
-          )
-        ),
-        (0, _hyperapp.h)(
-          'div',
-          { 'class': 'col-md-6' },
-          (0, _hyperapp.h)(
-            'h5',
-            { 'class': 'contact-call' },
-            'Call for reservations:'
-          ),
-          (0, _hyperapp.h)(
-            'h1',
-            { 'class': 'contact-number' },
-            '(206)-643-0185'
-          ),
-          (0, _hyperapp.h)(
-            'h5',
-            { 'class': 'contact-hours-title' },
-            'Weekday Hours:'
-          ),
-          (0, _hyperapp.h)(
-            'h5',
-            { 'class': 'contact-street' },
-            'from 4pm-9pm',
-            (0, _hyperapp.h)('br', null),
-            'Call for reservations'
-          ),
-          (0, _hyperapp.h)(
-            'h5',
-            { 'class': 'contact-hours-title' },
-            'Weekend Hours:'
-          ),
-          (0, _hyperapp.h)(
-            'h5',
-            { 'class': 'contact-street' },
-            'from 3pm-10pm',
-            (0, _hyperapp.h)('br', null),
-            'Call for reservations'
-          )
-        )
-      ),
-      (0, _hyperapp.h)(
-        'div',
-        { id: 'map' },
-        setTimeout(mapBox, 10)
-      )
-    )
-  );
 }
 // <Header state={state} actions={actions}/>
 // <Button state={state} actions={actions}/>
@@ -1589,8 +1584,6 @@ function Reviews(_ref) {
       actions.previousReview();
     }
   };
-
-  // setInterval(leftArrow,2000);
 
   var rightArrow = function rightArrow() {
     if (state.globalState.setReview.currentReview !== state.globalState.reviews.length - 1) {
